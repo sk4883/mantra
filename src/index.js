@@ -14,8 +14,8 @@ const middleware = applyMiddleware(logger);
 
 //const store = createStore(reducers, middleware);localStorage.getItem("myItem") === "null"
 
-const persistedState = localStorage.getItem("reduxState")  ? JSON.parse(localStorage.getItem("reduxState")) : {};
-const store = createStore(reducers, persistedState, middleware);
+//const persistedState = localStorage.getItem("reduxState")  ? JSON.parse(localStorage.getItem("reduxState")) : {};
+const store = createStore(reducers, middleware);
 
 // store.subscribe(()=>{
 // 	localStorage.setItem("reduxState", JSON.stringify(store.getState()));
